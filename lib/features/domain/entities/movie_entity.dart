@@ -3,11 +3,13 @@ import 'package:equatable/equatable.dart';
 class MovieEntity extends Equatable {
   final int id;
   final String backdropPath;
-  final Map<String,dynamic> genres;
+  // I will use it, if I take a movie => detail api
+  // final List<Genre> genres; 
+  final List<int> genres;
   final String overview;
   final double popularity;
   final String posterPath;
-  final String releaseDate;
+  final DateTime releaseDate;
   final String title;
   final double voteAverage;
 
@@ -36,3 +38,24 @@ class MovieEntity extends Equatable {
     voteAverage
   ];
 }
+/*
+class Genre {
+    int id;
+    String name;
+
+    Genre({
+        required this.id,
+        required this.name,
+    });
+
+    factory Genre.fromJson(Map<String, dynamic> json) => Genre(
+        id: json['id'],
+        name: json['name'],
+    );
+
+    Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+    };
+}
+*/

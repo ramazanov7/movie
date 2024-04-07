@@ -4,7 +4,6 @@ import 'package:movie/core%20/error/failure.dart';
 import 'package:movie/core%20/usecase/usecase.dart';
 import 'package:movie/features/domain/entities/movie_entity.dart';
 import 'package:movie/features/domain/repositories/movie_repository.dart';
-import 'package:meta/meta.dart';
 
 class GetAllMovies extends UseCase<List<MovieEntity>, PageMovieParams> {
   final MovieRepository movieRepository;
